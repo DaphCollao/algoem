@@ -5,8 +5,14 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #231f1f;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 header {
@@ -42,19 +48,19 @@ header .navbar a {
   color: #883736 !important;
 }
 
-header .navbar .logoAlgoem {
+header .navbar a .logoAlgoem {
   width: 15rem;
   margin: auto;
 }
 
-@media screen and (max-width: 375px) {
-  header .navbar .logoAlgoem {
-    width: 10rem;
+@media screen and (min-width: 280px) and (max-width: 336px) {
+  header .navbar a .logoAlgoem {
+    width: 11rem;
   }
 }
 
-@media screen and (max-width: 920px) {
-  header .navbar .logoAlgoem {
+@media screen and (min-width: 920px) {
+  header .navbar a .logoAlgoem {
     width: 20rem;
   }
 }
@@ -67,38 +73,134 @@ main {
 
 #bannerSection {
   width: 100%;
-  max-height: auto;
+  height: 86vh;
   padding: 0;
   position: relative;
 }
 
 #bannerSection .banner {
   width: 100%;
+  height: 100%;
 }
 
 #bannerSection .iconDiv {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 3rem;
   left: 5%;
   right: 5%;
 }
 
 #bannerSection .iconBanner {
   padding: 0;
-  width: 6%;
+  width: 100%;
 }
 
-#bannerSection .iconBanner:hover {
-  background-color: #883736;
+#bannerSection .wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#bannerSection .wrapper .icon {
+  background: rgba(0, 0, 0, 0);
   border-radius: 50%;
-  border: 2px solid #be9695;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@media screen and (min-width: 475px) {
+  #bannerSection .wrapper .icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  #bannerSection .wrapper .icon {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+#bannerSection .wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#bannerSection .wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  -webkit-transform: translate(-50%) rotate(45deg);
+          transform: translate(-50%) rotate(45deg);
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#bannerSection .wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+#bannerSection .wrapper .icon:hover span,
+#bannerSection .wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+#bannerSection .wrapper .facebook:hover,
+#bannerSection .wrapper .facebook:hover .tooltip,
+#bannerSection .wrapper .facebook:hover .tooltip::before {
+  background: #883736;
+  color: #ffffff;
 }
 
 #serviciosSection {
+  height: 100vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#231f1f), to(#883736));
   background-image: linear-gradient(to bottom right, #231f1f, #883736);
   color: #faf9f9;
   border-radius: 10px;
+  padding: 2rem;
 }
 
 #serviciosSection span {
@@ -139,6 +241,15 @@ main {
 
 #contactoSection h3 {
   color: #faf9f9;
+}
+
+#contactoSection span {
+  color: #be9695;
+}
+
+#contactoSection a {
+  text-decoration: none;
+  color: #be9695;
 }
 
 #empresasSection {
@@ -192,7 +303,7 @@ main {
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  width: 100vw;
 }
 
 #empresasSection .slider::before, #empresasSection .slider::after {

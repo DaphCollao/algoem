@@ -2,46 +2,58 @@
 @import "variables";
 
 // ======== GENERAL STYLES ========
+//HTML
+html {
+    overflow-x: hidden;
+}
 
 // Body
-body{
+body {
     background-color: $black;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 // Header
-header{
+header {
     width: 100vw;
     min-height: 12vh;
     background-color: $white;
-    .navbar{
+
+    .navbar {
         min-height: 12vh;
-        .container-fluid{
+
+        .container-fluid {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
-            .collapse{
+            .collapse {
                 justify-content: flex-end;
             }
         }
-        a{
-            color: $main_red !important;
-        }
-        .logoAlgoem{
-            width: 15rem;
-            margin: auto;
-            @media screen and (max-width: 375px) {
-                width: 10rem;
-            }
-            @media screen and (max-width: 920px) {
-                width: 20rem;
+
+        a {
+            color: $main_red  !important;
+
+            .logoAlgoem {
+                width: 15rem;
+                margin: auto;
+
+                @media screen and (min-width: 280px) and (max-width:336px) {
+                    width: 11rem;
+                }
+
+                @media screen and (min-width: 920px) {
+                    width: 20rem;
+                }
             }
         }
     }
 }
 
 // Main
-main{
+main {
     width: 100vw;
     min-height: 83vh;
     background-color: $white;
@@ -50,60 +62,142 @@ main{
 // ======== Styles by Section ========
 
 // Banner
-#bannerSection{
+#bannerSection {
     width: 100%;
-    max-height: auto;
+    height: 86vh;
     padding: 0;
     position: relative;
 
-    .banner{
+    .banner {
         width: 100%;
+        height: 100%;
     }
-    .iconDiv{
+
+    .iconDiv {
         position: absolute;
-        bottom: 0.5rem;
+        bottom: 3rem;
         left: 5%;
         right: 5%;
     }
-    .iconBanner{
+
+    .iconBanner {
         padding: 0;
-        width: 6%;
-        &:hover{
-            background-color: $main_red;
-            border-radius: 50%;
-            border: 2px solid $ligth_red;
-        }  
+        width: 100%;
+    }
+
+    //Popups
+    .wrapper {
+        display: inline-flex;
+        list-style: none;
+        justify-content: space-evenly;
+
+    }
+
+    .wrapper .icon {
+        background: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        @media screen and (min-width: 475px){
+            width: 65px;
+            height: 65px;
+        }
+        @media screen and (min-width: 820px){
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    .wrapper .tooltip {
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        background: #ffffff;
+        color: #ffffff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip::before {
+        position: absolute;
+        content: "";
+        height: 8px;
+        width: 8px;
+        background: #ffffff;
+        bottom: -3px;
+        left: 50%;
+        transform: translate(-50%) rotate(45deg);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon:hover .tooltip {
+        top: -45px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .facebook:hover,
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip::before {
+        background: $main_red;
+        color: #ffffff;
     }
 }
 
 // Nuestros Servicios
-#serviciosSection{
+#serviciosSection {
+    height: 100vh;
     background-image: linear-gradient(to bottom right, #231f1f, #883736);
     color: $white;
     border-radius: 10px;
-    span{
+    padding: 2rem;
+
+    span {
         color: $ligth_red;
     }
 }
 
 // Acerca de Nosotros
-#nosotrosSection{
+#nosotrosSection {
     background-color: $white;
     color: $main_red;
     padding: 2rem;
     width: 100vw;
-    p{
+
+    p {
         color: $black;
     }
-    .vision{
-        img{
+
+    .vision {
+        img {
             width: 40rem;
         }
     }
-    .mision{
-        .misionText{
+
+    .mision {
+        .misionText {
             color: $main_red;
-            p{
+
+            p {
                 color: $black;
             }
         }
@@ -111,28 +205,45 @@ main{
 }
 
 // Contacto
-#contactoSection{
+#contactoSection {
+
     background-image: linear-gradient(to bottom right, #231f1f, #883736);
-    h2{
+
+    h2 {
         color: $white;
     }
-    h3{
+
+    h3 {
         color: $white;
+    }
+
+    span {
+        color: $ligth_red;
+    }
+
+    a {
+        text-decoration: none;
+        color: $ligth_red;
     }
 }
 
 // Clientes
-#empresasSection{
+#empresasSection {
     color: $main_red;
 
     @mixin white-gradient {
-        background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     }
 
     // Animation
     @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-250px * 7))}
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-250px * 7))
+        }
     }
 
     // Styling
@@ -150,10 +261,10 @@ main{
         box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
         height: 100px;
         margin: auto;
-        overflow:hidden;
+        overflow: hidden;
         position: relative;
-        width: 960px;
-        
+        width: 100vw;
+
         &::before,
         &::after {
             @include white-gradient;
@@ -163,7 +274,7 @@ main{
             width: 200px;
             z-index: 2;
         }
-        
+
         &::after {
             right: 0;
             top: 0;
@@ -174,16 +285,17 @@ main{
             left: 0;
             top: 0;
         }
-        
+
         .slide-track {
             animation: scroll $animationSpeed linear infinite;
             display: flex;
             width: calc(250px * 14);
         }
-        
+
         .slide {
             width: 100%;
-            img{
+
+            img {
                 height: fit-content;
                 width: 93px;
                 margin-left: 2rem;
@@ -193,7 +305,7 @@ main{
 }
 
 //Footer
-footer{
+footer {
     width: 100vw;
     height: 5vh;
     color: $white;
@@ -202,8 +314,8 @@ footer{
 }
 
 //Subir
-.subir{
-    a{
+.subir {
+    a {
         color: $black;
         text-decoration: none;
     }
