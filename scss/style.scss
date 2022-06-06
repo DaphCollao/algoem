@@ -1,0 +1,134 @@
+@import "reset";
+@import "variables";
+
+// ======== GENERAL STYLES ========
+
+// Body
+body{
+    background-color: $black;
+}
+
+// Header
+header{
+    width: 100vw;
+    min-height: 12vh;
+    background-color: $white;
+    .navbar{
+        min-height: 12vh;
+        .container-fluid{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .collapse{
+                justify-content: flex-end;
+            }
+        }
+        a{
+            color: $main_red !important;
+        }
+        .logoAlgoem{
+            width: 15rem;
+            margin: auto;
+            @media screen and (max-width: 375px) {
+                width: 10rem;
+            }
+            @media screen and (max-width: 920px) {
+                width: 20rem;
+            }
+        }
+    }
+}
+
+// Main
+main{
+    width: 100vw;
+    min-height: 83vh;
+    background-color: $white;
+}
+// Banner
+#bannerSection{
+    width: 100%;
+    max-height: auto;
+    padding: 0;
+    position: relative;
+
+    .banner{
+        width: 100%;
+    }
+    .iconDiv{
+        position: absolute;
+        bottom: 0.5rem;
+        left: 5%;
+        right: 5%;
+    }
+    .iconBanner{
+        padding: 0;
+        width: 6%;
+        &:hover{
+            background-color: $main_red;
+            border-radius: 50%;
+            border: 2px solid $ligth_red;
+        }  
+    }
+}
+
+// Nuestros Servicios
+#serviciosSection{
+    background-image: linear-gradient(to bottom right, #231f1f, #883736);
+    color: $white;
+    border-radius: 10px;
+    span{
+        color: $ligth_red;
+    }
+}
+
+// Acerca de Nosotros
+#nosotrosSection{
+    background-color: $white;
+    color: $main_red;
+    padding: 2rem;
+    width: 100vw;
+    p{
+        color: $black;
+    }
+    .vision{
+        img{
+            width: 40rem;
+        }
+    }
+    .mision{
+        .misionText{
+            color: $main_red;
+            p{
+                color: $black;
+            }
+        }
+    }
+}
+
+// Contacto
+#contactoSection{
+    background-image: linear-gradient(to bottom right, #231f1f, #883736);
+    h2{
+        color: $white;
+    }
+    h3{
+        color: $white;
+    }
+}
+
+// Clientes
+#empresasSection{
+    color: $main_red;
+    
+}
+
+//Footer
+footer{
+    width: 100vw;
+    height: 5vh;
+    color: $white;
+    font-size: 0.8em;
+    text-align: center;
+}

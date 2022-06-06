@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #231f1f;
+}
+
+header {
+  width: 100vw;
+  min-height: 12vh;
+  background-color: #faf9f9;
+}
+
+header .navbar {
+  min-height: 12vh;
+}
+
+header .navbar .container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .navbar .container-fluid .collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .navbar a {
+  color: #883736 !important;
+}
+
+header .navbar .logoAlgoem {
+  width: 15rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 375px) {
+  header .navbar .logoAlgoem {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  header .navbar .logoAlgoem {
+    width: 20rem;
+  }
+}
+
+main {
+  width: 100vw;
+  min-height: 83vh;
+  background-color: #faf9f9;
+}
+
+#bannerSection {
+  width: 100%;
+  max-height: auto;
+  padding: 0;
+  position: relative;
+}
+
+#bannerSection .banner {
+  width: 100%;
+}
+
+#bannerSection .iconDiv {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 5%;
+  right: 5%;
+}
+
+#bannerSection .iconBanner {
+  padding: 0;
+  width: 6%;
+}
+
+#bannerSection .iconBanner:hover {
+  background-color: #883736;
+  border-radius: 50%;
+  border: 2px solid #be9695;
+}
+
+#serviciosSection {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#231f1f), to(#883736));
+  background-image: linear-gradient(to bottom right, #231f1f, #883736);
+  color: #faf9f9;
+  border-radius: 10px;
+}
+
+#serviciosSection span {
+  color: #be9695;
+}
+
+#nosotrosSection {
+  background-color: #faf9f9;
+  color: #883736;
+  padding: 2rem;
+  width: 100vw;
+}
+
+#nosotrosSection p {
+  color: #231f1f;
+}
+
+#nosotrosSection .vision img {
+  width: 40rem;
+}
+
+#nosotrosSection .mision .misionText {
+  color: #883736;
+}
+
+#nosotrosSection .mision .misionText p {
+  color: #231f1f;
+}
+
+#contactoSection {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#231f1f), to(#883736));
+  background-image: linear-gradient(to bottom right, #231f1f, #883736);
+}
+
+#contactoSection h2 {
+  color: #faf9f9;
+}
+
+#contactoSection h3 {
+  color: #faf9f9;
+}
+
+#empresasSection {
+  color: #883736;
+}
+
+footer {
+  width: 100vw;
+  height: 5vh;
+  color: #faf9f9;
+  font-size: 0.8em;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
