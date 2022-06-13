@@ -250,10 +250,13 @@ main {
 
 // Contacto
 #contactoSection {
-    height: 50vh;
+    min-height: 50vh;
     padding: 2rem;
     background-image: linear-gradient(to bottom right, #231f1f, #883736);
     color: $white;
+    @media screen and (min-width: 768px) {
+        height: 50vh;
+    }
 
     h4 {
         padding: 1rem;

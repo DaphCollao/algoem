@@ -288,11 +288,17 @@ main {
 }
 
 #contactoSection {
-  height: 50vh;
+  min-height: 50vh;
   padding: 2rem;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#231f1f), to(#883736));
   background-image: linear-gradient(to bottom right, #231f1f, #883736);
   color: #faf9f9;
+}
+
+@media screen and (min-width: 768px) {
+  #contactoSection {
+    height: 50vh;
+  }
 }
 
 #contactoSection h4 {
