@@ -13,286 +13,375 @@
 </head>
 
 <body>
-    <header id="header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img class="logoAlgoem" src="./img/logo_algoem.png" alt="Logo Algoem">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse w-auto justify-self-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#bannerSection"><i
-                                    class="bi bi-house-door-fill"></i> Inicio</a>
+    <div id="app">
+        <header id="header">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"> <img class="logoAlgoem" src="./img/logo_algoem.png" alt="Logo Algoem">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse w-auto justify-self-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#bannerSection"><i
+                                        class="bi bi-house-door-fill"></i> Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#serviciosSection"><i class="bi bi-gear-wide-connected"></i>
+                                    Nuestros Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#nosotrosSection"><i class="bi bi-book-half"></i> Acerca de
+                                    nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contactoSection"><i class="bi bi-envelope-fill"></i> Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- ========== Banner ========== -->
+            <section class="container-fluid" id="bannerSection">
+                <img class="banner image-fluid" src="./img/fondo3.png" alt="Banner Algoem">
+                <!-- Icons represent values of company -->
+                <div class="iconDiv row justify-content-evenly p-0">
+                    <ul class="wrapper">
+                        <li class="icon facebook">
+                            <span class="tooltip">Confianza</span>
+                            <img class="iconBanner" src="./img/icons/trust-white.png" alt="">
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#serviciosSection"><i class="bi bi-gear-wide-connected"></i>
-                                Nuestros Servicios</a>
+                        <li class="icon facebook">
+                            <span class="tooltip">Talento</span>
+                            <img class="iconBanner" src="./img/icons/talent-management-white.png" alt="">
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#nosotrosSection"><i class="bi bi-book-half"></i> Acerca de
-                                nosotros</a>
+                        <li class="icon facebook">
+                            <span class="tooltip">Seguridad</span>
+                            <img class="iconBanner" src="./img/icons/safety-white.png" alt="">
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contactoSection"><i class="bi bi-envelope-fill"></i> Contacto</a>
+                        <li class="icon facebook">
+                            <span class="tooltip">Requerimiento</span>
+                            <img class="iconBanner" src="./img/icons/require-white.png" alt="">
+                        </li>
+                        <li class="icon facebook">
+                            <span class="tooltip">Calidad</span>
+                            <img class="iconBanner" src="./img/icons/premium-product-white.png" alt="">
+                        </li>
+                        <li class="icon facebook">
+                            <span class="tooltip">Iniciativa</span>
+                            <img class="iconBanner" src="./img/icons/initiative-white.png" alt="">
+                        </li>
+                        <li class="icon facebook">
+                            <span class="tooltip">Rapidez</span>
+                            <img class="iconBanner" src="./img/icons/fast-time-white.png" alt="">
+                        </li>
+                        <li class="icon facebook">
+                            <span class="tooltip">Proactividad</span>
+                            <img class="iconBanner" src="./img/icons/agile-proactive-white.png" alt="">
                         </li>
                     </ul>
+                    <!-- Scroll Banner-->
+                    <div class="scrolls">
+                        <a class="scrolls" href="#serviciosSection">
+                            <span><i title="Ir a Servicios"
+                                    class="bi bi-chevron-double-down row justify-content-center"></i></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        </nav>
-    </header>
-    <main>
-        <!-- Banner -->
-        <section class="container-fluid" id="bannerSection">
-            <img class="banner image-fluid" src="./img/fondo3.png" alt="Banner Algoem ">
-            <!-- Icons represent values of company -->
-            <div class="iconDiv row justify-content-evenly p-0">
-                <ul class="wrapper">
-                    <li class="icon facebook">
-                        <span class="tooltip">Confianza</span>
-                        <img class="iconBanner" src="./img/icons/trust-white.png" alt="">
+            </section>
+            <!-- ========== Nuestros Servicios ========== -->
+            <section class="text-center row" id="serviciosSection">
+                <h2 class="pt-3">
+                    Nuestros Servicios
+                </h2>
+                <p class="mt-3">
+                    Nuestra empresa se especializada en <span>protección</span> , <span>transporte</span> ,
+                    <span>construcción
+                        civil</span> <span>metalúrgica</span> y <span>proveedora de materiales industriales</span> y para
+                    la <span>minería</span>.
+                </p>
+                <p class="pb-5">
+                    Presente en el rubro de <span>Transportes de carga</span> y <span>construcción</span> entre otros
+                    servicios integrales con una <span>flota de camiones</span>, <span>ramplas</span> y <span>equipos</span>
+                    que la convierte en una empresa con una buena oferta de servicios de calidad en el rubro.
+                </p>
+                <!-- // Servicios imagenes // -->
+                <!-- List services -->
+                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Transporte</button>
                     </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Talento</span>
-                        <img class="iconBanner" src="./img/icons/talent-management-white.png" alt="">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                            type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false">Construcción</button>
                     </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Seguro</span>
-                        <img class="iconBanner" src="./img/icons/secure-white.png" alt="">
-                    </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Seguridad</span>
-                        <img class="iconBanner" src="./img/icons/safety-white.png" alt="">
-                    </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Requisitos</span>
-                        <img class="iconBanner" src="./img/icons/require-white.png" alt="">
-                    </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Calidad</span>
-                        <img class="iconBanner" src="./img/icons/premium-product-white.png" alt="">
-                    </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Iniciativa</span>
-                        <img class="iconBanner" src="./img/icons/initiative-white.png" alt="">
-                    </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Rapidez</span>
-                        <img class="iconBanner" src="./img/icons/fast-time-white.png" alt="">
-                    </li>
-                    <li class="icon facebook">
-                        <span class="tooltip">Proactivo</span>
-                        <img class="iconBanner" src="./img/icons/agile-proactive-white.png" alt="">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                            type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Proveedor de
+                            Materiales</button>
                     </li>
                 </ul>
-            </div>
-        </section>
-        <!-- Nuestros Servicios -->
-        <section class="text-center" id="serviciosSection">
-            <h2 class="pt-5">
-                Nuestros Servicios
-            </h2>
-            <p class="mt-3">
-                Nuestra empresa especializada en <span>protección</span> , <span>transportes</span> , <span>constructora
-                    civil</span> <span>metalúrgica</span> y , <span> proveedora de materiales industriales</span> y para
-                la <span>minería</span>.
-            </p>
-            <p class="pb-5">
-                Presente en el rubro de <span>Transportes de carga</span> y <span>construcción</span> entre otros
-                servicios integrales con una <span>flota de camiones</span>, <span>ramplas</span> y <span>equipos</span>
-                que la convierte en una empresa con una buena oferta de servicios de calidad en el rubro.
-            </p>
-            <!-- Servicios imagenes -->
-            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                        type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Transporte</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                        type="button" role="tab" aria-controls="profile-tab-pane"
-                        aria-selected="false">Construcción</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                        type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Proveedor de
-                        Materiales</button>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                    tabindex="0">
-                    servicios de transporte e imagenes
-                    <ul class="transportList">
-                        <li><i class="bi bi-truck"></i> Abastecimiento, transporte en menores y grandes Toneladas</li>
-                    </ul>
-                </div>
-                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                    tabindex="0">servicios de contruccion e imagenes</div>
-                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
-                    tabindex="0">servicios proovedor de materiales e imagenes</div>
-            </div>
-        </section>
-        <!-- Acerca de Nosotros -->
-        <section class="text-center container-fluid" id="nosotrosSection">
-            <h2>Acerca de nosotros</h2>
-            <p>
-                Contamos con una amplia trayectoria de en el rubro y nuestro propósito es poder apoyar a nuestros
-                clientes en forma rápida, segura y responsable en el suministro de los diferentes servicios requeridos y
-                que vuestra empresa necesite, cumpliendo con los estándares de nuestros clientes.
-            </p>
-            <p>
-                Somos una empresa creada para prestar servicios de calidad que cubran en su totalidad las necesidades de
-                nuestros clientes.
-            </p>
-
-            <!-- Vision -->
-            <div class="vision row mt-5 justify-content-center align-items-center">
-                <img class="col-6" src="./img/vision.png" alt="">
-                <div class="visionText col-6">
-                    <h3>
-                        Vision
-                    </h3>
-                    <p>Nuestra vision es convertirnos en una empresa reconoccida en la región, por nuestro compromiso,
-                        calidad y etica de trabajo, brindando siempre a nuestros cliente el mejor servicio.</p>
-                </div>
-            </div>
-            <!-- Mision -->
-            <div class="mision row mt-5 justify-content-center align-items-center">
-                <div class="misionText col-6">
-                    <h3>
-                        Mision
-                    </h3>
-                    <p>
-                        Consolidarnos en el mercado nacional como una Empresa de alta confiabilidad técnica a la cual
-                        nuestro cliente nos pueda encomendar la calidad de sus principales proyectos.
-                    </p>
-                </div>
-                <img class="col-6" src="./img/camion_algoem.png" alt="Camion de la Empresa Algoem">
-            </div>
-        </section>
-
-        <!-- Contacto -->
-        <section id="contactoSection">
-            <h2 class="text-center">Contacto</h2>
-            <h3 class="h5"><i class="bi bi-telephone-fill"></i> Fono Contacto: <span>(+56-9) 57653842 </span></h3>
-            <h3 class="h5"><i class="bi bi-envelope-paper-fill"></i> Email de contacto: <a
-                    href="mailto:coordinador@algoem.cl">coordinador@algoem.cl</a></h3>
-        </section>
-
-        <!-- Empresas -->
-        <section class="text-center" id="empresasSection">
-            <h3>Nuestros Clientes</h3>
-            <div class="slider">
-                <div class="slide-track">
-                    <div class="slide">
-                        <img src="./img/empresas/mollerpc.png" alt="" />
+                <!-- Content List -->
+                <div class="tab-content contentListServices col-12 col-md-6 col-lg-6" id="myTabContent">
+                    <div class="tab-pane fade show active mt-3" id="home-tab-pane" role="tabpanel"
+                        aria-labelledby="home-tab" tabindex="0">
+                        <ul class="transportList">
+                            <li><i class="bi bi-truck"></i> Abastecimiento, transporte en menores y grandes Toneladas</li>
+                            <li><i class="bi bi-truck"></i> Retiro, transporte e instalaciones de estructuras metálicas</li>
+                            <li><i class="bi bi-truck"></i> Transporte de cargas varias en camiones ramplas bateas 20 m3 y
+                                camiones 3/4</li>
+                            <li><i class="bi bi-truck"></i> Transporte en Faena y Carreteras</li>
+                        </ul>
                     </div>
-                    <div class="slide">
-                        <img src="./img/empresas/almagro.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/builtek.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/echeverriaizq.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/novatec.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/hdi.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/sacyr.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/bupa.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/kps.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/sqm.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/enaex.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/kps.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/loga.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/daher.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/ggi.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/mollerpc.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/almagro.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/builtek.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/echeverriaizq.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/novatec.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/hdi.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/sacyr.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/bupa.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/kps.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/sqm.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/enaex.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/kps.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/loga.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/daher.png" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/empresas/ggi.png" alt="" />
+                    <div class="tab-pane fade mt-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                        tabindex="0">
+                        <ul class="constructionList">
+                            <li><i class="bi bi-building"></i> Armado y fabricación de galpones estructuras metálicas, vigas
+                                reparaciones en terreno</li>
+                            <li><i class="bi bi-building"></i> Montajes soldaduras mig.tig inox arco</li>
+                            <li><i class="bi bi-building"></i> Movimientos de Tierra tronaduras retiros rellenos
+                                excavaciones</li>
+                            <li><i class="bi bi-building"></i> Obras Civiles en General Carpinterías en obre Gruesa</li>
+                            <li><i class="bi bi-building"></i> Construcción y terminación de Edificios Completos</li>
+                        </ul>
                     </div>
 
+                    <div class="tab-pane fade mt-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                        tabindex="0">
+                        <ul class="supplierList">
+                            <li><i class="bi bi-boxes"></i> Proveedor de materiales industriales</li>
+                            <li><i class="bi bi-boxes"></i> Proveedor de materiales para la minería</li>
+                        </ul>
+                    </div>
                 </div>
+                <!-- Carousel -->
+                <div id="carouselExampleControls" class="carousel slide imgServicios col-12 col-md-6 col-lg-6 mt-3" data-bs-ride="carousel">
+                    <div class="carousel-inner m-auto">
+                        <div class="carousel-item active">
+                            <img src="./img/transport_1.jpeg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Transporte</h5>
+                                <p>Camion de transporte.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/construction_1.jpeg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Construcción</h5>
+                                <p>Describir imagen.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/construction_2.jpeg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Construcción</h5>
+                                <p>Describir imagen.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/construction_3.jpeg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Construcción</h5>
+                                <p>Describir imagen.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- Scroll Servicios-->
+                <div class="scrolls col-12">
+                    <a class="scrolls" title="Ir a Inicio" href="#header"><span><i
+                                class="bi bi-chevron-double-up"></i></span></a>
+                    <a class="scrolls" title="Ir a Acerca Nosotros" href="#nosotrosSection"><span><i
+                                class="bi bi-chevron-double-down"></i></span></a>
+                </div>
+
+            </section>
+            <!-- ========== Acerca de Nosotros ========== -->
+            <section class="text-center container-fluid" id="nosotrosSection">
+                <h2 class="pt-3">Acerca de nosotros</h2>
+                <p class="mt-3">
+                    Contamos con una amplia trayectoria en el rubro y nuestro propósito es poder apoyar a nuestros
+                    clientes en forma <span class="colorRed">rápida</span>, <span class="colorRed">segura</span> y <span
+                        class="colorRed">responsable</span> en el suministro de los diferentes servicios requeridos y
+                    que vuestra empresa necesite, cumpliendo con los estándares impresindibles.
+                </p>
+                <p class="mt-3">
+                    Somos una empresa creada para <span class="colorRed">prestar servicios de calidad</span> que cubran en
+                    su totalidad las necesidades de
+                    nuestros clientes.
+                </p>
+
+                <!-- Vision -->
+                <div class="vision row mt-5 justify-content-center align-items-center">
+                    <img class="col-12 col-md-6 col-lg-6" src="./img/vision.png" alt="">
+                    <div class="visionText col-12 col-md-6 col-lg-6">
+                        <h3>
+                            Vision
+                        </h3>
+                        <p class="mt-3">Convertirnos en una empresa reconoccida en la región, por <span
+                                class="colorRed">nuestro compromiso</span>, <span class="colorRed">calidad</span> y <span
+                                class="colorRed">etica de trabajo</span>, brindando siempre a nuestros cliente el <span
+                                class="colorRed">mejor servicio</span>.</p>
+                    </div>
+                </div>
+                <!-- Mision -->
+                <div class="mision row justify-content-center align-items-center">
+                    <img class="col-12 col-md-6 col-lg-6 misionImg" src="./img/camion_algoem.png" alt="Camion de la Empresa Algoem">
+                    <div class="misionText col-12 col-md-6 col-lg-6">
+                        <h3>
+                            Mision
+                        </h3>
+                        <p class="mt-3">
+                            Consolidarnos en el mercado nacional como una Empresa de <span class="colorRed">alta
+                                confiabilidad técnica</span> a la cual nuestro cliente nos pueda encomendar la <span
+                                class="colorRed">calidad de sus principales proyectos</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Scroll -->
+                <div class="scrolls">
+                    <a title="Ir a Servicios" href="#serviciosSection"><span><i
+                                class="bi bi-chevron-double-up"></i></span></a>
+                    <a title="Ir a Contacto" href="#contactoSection"><span><i
+                                class="bi bi-chevron-double-down"></i></span></a>
+                </div>
+            </section>
+
+            <!-- Contacto -->
+            <section class="row" id="contactoSection">
+                <h2 class="text-center">Contacto</h2>
+                <div class="col-12 col-md-8 col-lg-8">
+                    <h3 class="h4">¡Si quieres información acerca de nuestros servicios no dudes en contactarnos! </h3>
+                    <h4 class="h5"><i class="bi bi-telephone-fill"></i> Fono Contacto: <span>(+56-9) 57653842 </span></h4>
+                    <h4 class="h5"><i class="bi bi-envelope-paper-fill"></i> Email de contacto: <a
+                            href="mailto:coordinador@algoem.cl">coordinador@algoem.cl</a></h4>
+                </div>
+                <div class="imgContacto col-12 col-md-4 col-lg-4">
+                    <img src="./img/contact_section.svg" alt="Ingeniero">
+                </div>
+            </section>
+
+            <!-- Empresas -->
+            <section class="text-center" id="empresasSection">
+                <h3>Nuestros Clientes</h3>
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="./img/empresas/mollerpc.png" alt="Logo empresa Moller & Pérez-Cotapos" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/almagro.png" alt="Logo empresa Almagro" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/builtek.png" alt="Logo Empresa Builtek" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/echeverriaizq.png" alt="Logo Empresa Echeverria-Izquierdo" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/novatec.png" alt="Logo Empresa Novatec" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/hdi.png" alt="Logo Empresa HDI" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/sacyr.png" alt="Logo Empresa Sacyr" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/bupa.png" alt="Logo Empresa Clinica Bupa" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/kps.png" alt="Logo Empresa KPS" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/sqm.png" alt="Logo Empresa SQM" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/enaex.png" alt="Logo Empresa Enaex" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/loga.png" alt="Logo Empresa Loga" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/daher.png" alt="Logo Empresa Daher" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/ggi.png" alt="Logo Empresa GGI" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/mollerpc.png" alt="Logo Empresa Moller - Pérez-Cotapos" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/almagro.png" alt="Logo Empresa Almagro" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/builtek.png" alt="Logo Empresa Builtek" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/echeverriaizq.png" alt="Logo Empresa Echeverria-Izquierdo" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/novatec.png" alt="Logo empresa Novatec" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/hdi.png" alt="Logo empresa HDI" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/sacyr.png" alt="Logo empresa Sacyr" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/bupa.png" alt="Logo empresa Clinica Bupa" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/kps.png" alt="Logo empresa KPS" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/sqm.png" alt="Logo empresa SQM" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/enaex.png" alt="Logo empresa Enaex" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/loga.png" alt="Logo empresa Loga" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/daher.png" alt="Logo empresa Daher" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/empresas/ggi.png" alt="Logo empresa GGI" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Volver al Inicio -->
+            <div class="scrolls text-center">
+                <a title="Volver al Inicio" href="#header"><i class="bi bi-chevron-double-up"></i></a>
             </div>
-        </section>
-        <div class="subir text-center">
-            <a href="#header">
-                Subir <i class="bi bi-chevron-double-up"></i>
-            </a>
-        </div>
-    </main>
-    <footer>
-        Constructora y Transprote Algoem | All rights reserved
-    </footer>
+        </main>
+        <footer>
+            Constructora y Transprote Algoem | All rights reserved
+        </footer>
+    </div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
