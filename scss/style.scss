@@ -1,5 +1,7 @@
 @import "reset";
 @import "variables";
+@import "mixin";
+@import "text";
 
 // ======== GENERAL STYLES ========
 //HTML
@@ -12,17 +14,39 @@ body {
     background-color: $black;
     width: 100vw;
     min-height: 100vh;
+    h2{
+        font-family: $title-text;
+        font-size: 3.5em;
+        text-shadow: 4px 4px black;
+        @media screen and (min-width:320px) and (max-width:420px) {
+            font-size: 2.2em;
+        };
+    }
+    h3{
+        font-family: $title-text;
+        font-size: 2em;
+        @media screen and (min-width:320px) and (max-width:420px) {
+            font-size: 1.8em;
+        };
+    }
+    ul, p{
+        font-weight: 250;
+        font-family: $info-text;
+        font-size: 1.5em;
+        @media screen and (min-width:320px) and (max-width:420px) {
+            font-size: 1em;
+        };
+    }
 }
 //Subir
 .scrolls {
-    position: relative;
-    bottom: 0;
+    display: inline-flex;
+    justify-content: center;
+    width: 100vw;
     a {
         color: $black;
         text-decoration: none;
     }
-    height: 30px;
-    width: 20px;
     i{
         border-radius: 60%;
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
@@ -55,6 +79,11 @@ header {
 
     .navbar {
         min-height: 12vh;
+        ul{
+            @media screen and (max-width:1120px) {
+                font-size: 1.2em;
+            }
+        }
 
         .container-fluid {
             display: flex;
@@ -163,19 +192,20 @@ main {
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: #ffffff;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
     }
 
-    .wrapper .tooltip::before {
-        position: absolute;
-        content: "";
-        height: 8px;
-        width: 8px;
-        background: #ffffff;
-        bottom: -3px;
-        left: 50%;
-        transform: translate(-50%) rotate(45deg);
-        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
 
     .wrapper .icon:hover .tooltip {
         top: -45px;
@@ -195,16 +225,54 @@ main {
         background: $main_red;
         color: #ffffff;
     }
+    .scrolls{
+        color: white;
+    }
 }
 
 // Nuestros Servicios
 #serviciosSection {
     min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,fr);
     background-image: linear-gradient(to bottom right, #231f1f, #883736);
     color: $white;
     padding: 2rem;
-    @media screen and (min-width: 776px) {
-        height: 100vh;
+
+    .textContent{
+        grid-row: 1/2;
+        grid-column: 1/4;
+    }
+    .navListServicios{
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+    .contentListServices{
+        grid-row: 3/5;
+        grid-column: 1/2;
+    }
+    #carouselServicios{
+        grid-row: 3/5;
+        grid-column: 2/4;
+    }
+    .scrolls{
+        grid-row: 5/6;
+        grid-column: 1/4;
+    }
+    @media screen and (max-width: 886px) {
+        .contentListServices{
+            grid-row: 3/4;
+            grid-column: 1/4;
+        }
+        #carouselServicios{
+            grid-row: 4/5;
+            grid-column: 1/4;
+        }
     }
 
     span {
@@ -224,12 +292,15 @@ main {
             li {
                 list-style: none;
                 font-size: 0.9em;
+                @media screen and (max-width: 1068px) {
+                    font-size: 0.8em;
+                }
             }
         }
     }
     .imgServicios{
         margin: 0%;
-        width: 35%;
+        width: 30rem;
         img{
             margin: 0;
             border-radius: 5px;
@@ -238,40 +309,127 @@ main {
                 transform: scale(1.5);            
             }
         }
+        @media screen and (max-width: 537px) {
+            width: 25rem;
+        }
+        @media screen and (min-width:320px) and (max-width:449px) {
+            width: 15rem;
+        }
     }
 }
 
 // Acerca de Nosotros
 #nosotrosSection {
-    background-color: $white;
-    color: $main_red;
     padding: 2rem;
-    width: 100vw;
-
+    margin: 0;
+    @include bg-red;
+    h2{
+        text-shadow: 2px 2px rgb(47, 2, 2);
+        color: $main_red;
+    }
+    h3{
+        color: $main_red;
+    }
     p {
         color: $black;
     }
-
+    p{
+        padding: 0 2rem;
+    }
     .vision {
-        img {
-            width: 50%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+        
+        .visionImg { grid-column: 1 / 1 / 2 / 2; }
+        .visionText { grid-area: 1 / 2 / 2 / 4; }
+
+        .visionImg {
+            width: 40rem;
+            @media screen and (max-width: 1323px) {
+                width: 35rem;
+            }
+            @media screen and (max-width: 643px) {
+                width: 30rem;
+            }
+            @media screen and (max-width: 550px) {
+                width: 27rem;
+            }
+            @media screen and (max-width: 500px) {
+                width: 25rem;
+            }
+            @media screen and (max-width: 450px) {
+                width: 22rem;
+            }
+            @media screen and (min-width:320px) and (max-width:449px) {
+                width: 15rem;
+            }
+        }
+
+        @media screen and (max-width: 1164px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr, 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 10px;
+            
+            .visionImg { grid-area: 1 / 1 / 2 / 2; }   
+            .visionText { grid-area: 2 / 1 / 3 / 2; }
+        
         }
     }
 
     .mision {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+        justify-content: center;
+            
+        .misionText { grid-area: 1 / 1 / 2 / 3; }
+        .misionImg { grid-area: 1 / 3 / 2 / 4; }
+
         .misionText {
             color: $main_red;
             p {
                 color: $black;
             }
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 1064px) {
                 order: 1;
             }
         }
         .misionImg{
-            @media screen and (min-width: 768px) {
+            width: 32rem;
+            @media screen and (min-width: 1064px) {
                 order: 2;
             }
+            @media screen and (max-width: 550px) {
+                width: 27rem;
+            }
+            @media screen and (max-width: 450px) {
+                width: 25rem;
+            }
+            @media screen and (min-width:320px) and (max-width:449px) {
+                width: 20rem;
+            }
+        }
+        @media screen and (max-width: 1164px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: (2fr, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 10px;
+            
+            .misionImg { grid-area: 1 / 1 / 2 / 2; }
+            .misionText { grid-area: 2 / 1 / 3 / 2; }
+            
         }
     }
 
@@ -284,15 +442,22 @@ main {
 // Contacto
 #contactoSection {
     min-height: 50vh;
+    margin: 0;
     padding: 2rem;
     background-image: linear-gradient(to bottom right, #231f1f, #883736);
     color: $white;
-    @media screen and (min-width: 768px) {
-        height: 50vh;
+    h3{
+        font-size: 1.7em;
+        @media screen and (min-width:320px) and (max-width:400px) {
+            font-size: 1.3em;
+        }
     }
-
     h4 {
         padding: 1rem;
+        font-size: 1.5em;
+        @media screen and (min-width:320px) and (max-width:400px) {
+            font-size: 1.1em;
+        }
     }
 
     span {
@@ -314,11 +479,17 @@ main {
 
 // Clientes
 #empresasSection {
+    @include bg-red;
     height: 45vh;
     color: $main_red;
 
     h3 {
         padding: 2rem;
+        text-shadow: 2px 2px  rgb(47, 2, 2);
+        font-size: 2.8em;
+        @media screen and (min-width:320px) and (max-width:400px) {
+            font-size: 2em;
+        }
     }
 
     @mixin white-gradient {
@@ -377,9 +548,11 @@ main {
         }
 
         .slide-track {
+            margin: 0;
             animation: scroll $animationSpeed linear infinite;
             display: flex;
-            width: calc(250px * 14);
+            width: calc(250px * 28);
+
         }
 
         .slide {
@@ -389,11 +562,19 @@ main {
                 height: fit-content;
                 width: 93px;
                 margin-left: 2rem;
+                @media screen and (max-width:475px){
+                    height: fit-content;
+                    margin-left: 1rem;
+                    width: 50px;    
+                }
             }
         }
     }
 }
-
+//Up Scroll
+.upScroll{
+    @include bg-red;
+}
 //Footer
 footer {
     width: 100vw;
