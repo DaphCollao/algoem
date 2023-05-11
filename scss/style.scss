@@ -607,7 +607,7 @@ main {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        width: calc(250px * 14);
+        width: calc(250px * 15);
         animation-duration: 30s;
         animation-iteration-count: infinite;
     }
@@ -625,8 +625,8 @@ main {
         }
 
         100% {
-            -webkit-transform: translateX(calc(-250px * 7));
-            transform: translateX(calc(-250px * 7));
+            -webkit-transform: translateX(calc(-250px * 8));
+            transform: translateX(calc(-250px * 8));
         }
     }
 
@@ -637,8 +637,8 @@ main {
         }
 
         100% {
-            -webkit-transform: translateX(calc(-250px * 7));
-            transform: translateX(calc(-250px * 7));
+            -webkit-transform: translateX(calc(-250px * 8));
+            transform: translateX(calc(-250px * 8));
         }
     }
 
